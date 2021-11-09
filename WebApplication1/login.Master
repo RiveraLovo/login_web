@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="login.Master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 45px;
+        }
+        .auto-style5 {
+            height: 45px;
+            width: 162px;
+        }
+        .auto-style8 {
+            width: 162px;
+        }
+        .auto-style9 {
+            margin-top: 0px;
+        }
+        .auto-style10 {
+            height: 48px;
+            width: 162px;
+        }
+        .auto-style11 {
+            height: 48px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style5">
+                    <asp:Label ID="Label4" runat="server" BackColor="Black" ForeColor="Lime" Text="Login Registro"></asp:Label>
+                </td>
+                <td class="auto-style2">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style5">
+                    <asp:Label ID="Label2" runat="server" BackColor="Black" ForeColor="White" Text="Usuario"></asp:Label>
+                </td>
+                <td class="auto-style2">
+                    <asp:TextBox ID="Txtusuario" runat="server" CssClass="auto-style9" Height="31px" Width="206px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style10">
+                    <asp:Label ID="Label3" runat="server" BackColor="Black" ForeColor="White" Text="Contraseña"></asp:Label>
+                </td>
+                <td class="auto-style11">
+                    <asp:TextBox ID="txtcontraseña" runat="server" Height="33px" Width="204px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style8">&nbsp;</td>
+                <td>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:computo3ConnectionString %>" OnSelecting="SqlDataSource1_Selecting" SelectCommand="SELECT * FROM [sistema3]"></asp:SqlDataSource>
+                    <asp:Button ID="btnvalidar" runat="server" BackColor="Black" BorderColor="#000066" ForeColor="White" OnClick="btnvalidar_Click" Text="Ingresar" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style8">
+                    <asp:Label ID="Label5" runat="server" BackColor="Black" ForeColor="White" Text="Eres nuevo en el sistema?"></asp:Label>
+                </td>
+                <td>
+                    <asp:LinkButton ID="LinkButton1" runat="server">Crear cuenta</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style8">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style8">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style8">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style8">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
